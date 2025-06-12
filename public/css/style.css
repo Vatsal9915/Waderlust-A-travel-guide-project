@@ -1,10 +1,17 @@
 body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .navbar {
   height: 5rem;
   background-color: white;
+}
+
+.container{
+    flex: 1;
 }
 
 .fa-compass {
@@ -79,4 +86,9 @@ body {
 .card-img-overlay:hover {
   opacity: 0.2;
   background-color: white;
+}
+
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
 }
