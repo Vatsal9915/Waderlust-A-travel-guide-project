@@ -3,7 +3,7 @@
   <div class="col-8 offset-2">
     <h2>Create A New Listing</h2>
     <br /><br />
-    <form action="/listings" method="post">
+    <form action="/listings" method="post" novalidate class="needs-validation">
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input
@@ -11,11 +11,20 @@
           placeholder="Enter title"
           type="text"
           class="form-control"
+          required
         />
+        <div class="valid-feedback">Title looks Awesome!</div>
+        <div class="invalid-feedback">Please enter the title!</div>
       </div>
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
-        <input name="listing[description]" type="text" class="form-control" />
+        <input
+          name="listing[description]"
+          type="text"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Please enter the description of the property!</div>
       </div>
       <div class="mb-3">
         <label for="image" class="form-label">Image Link</label>
@@ -31,10 +40,12 @@
           <label for="price" class="form-label">Price</label>
           <input
             name="listing[price]"
-            placeholder="Enter price"
+            placeholder="Enter Price"
             type="number"
             class="form-control"
+            required
           />
+          <div class="invalid-feedback">Please enter the price</div>
         </div>
         <div class="mb-3 col-md-8">
           <label for="country" class="form-label">Country</label>
@@ -43,7 +54,9 @@
             placeholder="Enter country"
             type="text"
             class="form-control"
+            required
           />
+          <div class="invalid-feedback">Please enter the country name</div>
         </div>
       </div>
 
@@ -54,7 +67,9 @@
           placeholder="Enter location"
           type="text"
           class="form-control"
+          required
         />
+        <div class="invalid-feedback">Please enter the location</div>
       </div>
 
       <button class="btn btn-dark add-btn mt-3">Add+</button>
